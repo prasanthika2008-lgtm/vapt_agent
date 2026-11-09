@@ -1,0 +1,26 @@
+{"ts": "2026-11-02T04:50:16+00:00", "actor": "agent", "action": "tool_start", "detail": {"tool": "nmap", "target": "192.168.56.101", "port": null, "mode": "import"}}
+{"ts": "2026-11-02T04:50:16+00:00", "actor": "agent", "action": "tool_done", "detail": {"tool": "nmap", "findings": 9}}
+{"ts": "2026-11-02T04:50:16+00:00", "actor": "agent", "action": "tool_start", "detail": {"tool": "nikto", "target": "192.168.56.101", "port": 80, "mode": "import"}}
+{"ts": "2026-11-02T04:50:16+00:00", "actor": "agent", "action": "tool_done", "detail": {"tool": "nikto", "findings": 4}}
+{"ts": "2026-11-02T04:50:16+00:00", "actor": "agent", "action": "tool_start", "detail": {"tool": "zap", "target": "192.168.56.101", "port": 80, "mode": "import"}}
+{"ts": "2026-11-02T04:50:16+00:00", "actor": "agent", "action": "tool_done", "detail": {"tool": "zap", "findings": 4}}
+{"ts": "2026-11-02T04:55:30+00:00", "actor": "analyst", "action": "request", "detail": {"text": "Run a full assessment of 192.168.56.101", "target": "192.168.56.101", "scope_ok": true, "reason": "192.168.56.101 matches authorised scope entry 192.168.56.0/24."}}
+{"ts": "2026-11-02T04:55:51+00:00", "actor": "analyst", "action": "plan_approved", "detail": {"stage": 1, "plan": [{"tool": "nmap", "port": null, "rationale": "Host/port/service discovery first; every later choice depends on what is exposed."}]}}
+{"ts": "2026-11-02T04:55:51+00:00", "actor": "agent", "action": "tool_start", "detail": {"tool": "nmap", "target": "192.168.56.101", "port": null, "mode": "import"}}
+{"ts": "2026-11-02T04:55:51+00:00", "actor": "agent", "action": "tool_done", "detail": {"tool": "nmap", "findings": 9}}
+{"ts": "2026-11-02T04:55:53+00:00", "actor": "analyst", "action": "plan_approved", "detail": {"stage": 2, "plan": [{"tool": "nikto", "port": 80, "rationale": "HTTP found on 80: check server config / known issues."}, {"tool": "zap", "port": 80, "rationale": "HTTP found on 80: web-app/API weakness scan."}]}}
+{"ts": "2026-11-02T04:55:53+00:00", "actor": "agent", "action": "tool_start", "detail": {"tool": "nikto", "target": "192.168.56.101", "port": 80, "mode": "import"}}
+{"ts": "2026-11-02T04:55:53+00:00", "actor": "agent", "action": "tool_done", "detail": {"tool": "nikto", "findings": 4}}
+{"ts": "2026-11-02T04:55:53+00:00", "actor": "agent", "action": "tool_start", "detail": {"tool": "zap", "target": "192.168.56.101", "port": 80, "mode": "import"}}
+{"ts": "2026-11-02T04:55:53+00:00", "actor": "agent", "action": "tool_done", "detail": {"tool": "zap", "findings": 4}}
+{"ts": "2026-11-02T04:58:00+00:00", "actor": "Prasanthika", "action": "validation_approved", "detail": {"ts": "2026-11-02T04:58:00+00:00", "finding": "VAPT-001", "decision": "APPROVED", "by": "Prasanthika", "outcome": "Approved and recorded. Metasploit adapter not implemented - no exploit executed."}}
+{"ts": "2026-11-02T04:59:57+00:00", "actor": "analyst", "action": "request", "detail": {"text": "scan 8.8.8.8", "target": "8.8.8.8", "scope_ok": false, "reason": "8.8.8.8 is NOT in the authorised lab scope ['192.168.56.0/24']."}}
+{"ts": "2026-11-02T05:01:07+00:00", "actor": "analyst", "action": "request", "detail": {"text": "Run a full assessment of 192.168.56.101", "target": "192.168.56.101", "scope_ok": true, "reason": "192.168.56.101 matches authorised scope entry 192.168.56.0/24."}}
+{"ts": "2026-11-02T05:01:23+00:00", "actor": "analyst", "action": "plan_approved", "detail": {"stage": 1, "plan": [{"tool": "nmap", "port": null, "rationale": "Host/port/service discovery first; every later choice depends on what is exposed."}]}}
+{"ts": "2026-11-02T05:01:23+00:00", "actor": "agent", "action": "tool_start", "detail": {"tool": "nmap", "target": "192.168.56.101", "port": null, "mode": "import"}}
+{"ts": "2026-11-02T05:01:23+00:00", "actor": "agent", "action": "tool_done", "detail": {"tool": "nmap", "findings": 9}}
+{"ts": "2026-11-02T05:01:38+00:00", "actor": "analyst", "action": "plan_approved", "detail": {"stage": 2, "plan": [{"tool": "nikto", "port": 80, "rationale": "HTTP found on 80: check server config / known issues."}, {"tool": "zap", "port": 80, "rationale": "HTTP found on 80: web-app/API weakness scan."}]}}
+{"ts": "2026-11-02T05:01:38+00:00", "actor": "agent", "action": "tool_start", "detail": {"tool": "nikto", "target": "192.168.56.101", "port": 80, "mode": "import"}}
+{"ts": "2026-11-02T05:01:38+00:00", "actor": "agent", "action": "tool_done", "detail": {"tool": "nikto", "findings": 4}}
+{"ts": "2026-11-02T05:01:38+00:00", "actor": "agent", "action": "tool_start", "detail": {"tool": "zap", "target": "192.168.56.101", "port": 80, "mode": "import"}}
+{"ts": "2026-11-02T05:01:38+00:00", "actor": "agent", "action": "tool_done", "detail": {"tool": "zap", "findings": 4}}

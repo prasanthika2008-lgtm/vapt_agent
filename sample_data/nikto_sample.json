@@ -1,0 +1,5 @@
+[{"host":"192.168.56.101","port":"80","vulnerabilities":[
+{"id":"999957","method":"GET","url":"/","msg":"The anti-clickjacking X-Frame-Options header is not present."},
+{"id":"999102","method":"GET","url":"/","msg":"The X-Content-Type-Options header is not set."},
+{"id":"000366","method":"GET","url":"/icons/","msg":"Directory indexing found."},
+{"id":"000013","method":"GET","url":"/","msg":"Apache/2.2.8 appears to be outdated (current is at least Apache/2.4.x)."}]}]

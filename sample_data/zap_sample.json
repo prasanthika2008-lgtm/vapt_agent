@@ -1,0 +1,5 @@
+{"site":[{"@name":"http://192.168.56.101:80","alerts":[
+{"pluginid":"10020","alert":"X-Frame-Options Header Not Set","riskcode":"2","confidence":"2","desc":"<p>Missing anti-clickjacking header.</p>","cweid":"1021","instances":[{"uri":"http://192.168.56.101/","method":"GET","param":"x-frame-options","evidence":""}]},
+{"pluginid":"0","alert":"Directory Browsing","riskcode":"2","confidence":"2","desc":"<p>Directory listing is enabled.</p>","cweid":"548","instances":[{"uri":"http://192.168.56.101/icons/","method":"GET","param":"","evidence":"Index of /icons"}]},
+{"pluginid":"10010","alert":"Cookie No HttpOnly Flag","riskcode":"1","confidence":"2","desc":"<p>Cookie set without HttpOnly.</p>","cweid":"1004","instances":[{"uri":"http://192.168.56.101/login.php","method":"GET","param":"PHPSESSID","evidence":"Set-Cookie: PHPSESSID"}]},
+{"pluginid":"40018","alert":"SQL Injection","riskcode":"3","confidence":"1","desc":"<p>Possible SQL injection in parameter id.</p>","cweid":"89","instances":[{"uri":"http://192.168.56.101/product.php?id=1","method":"GET","param":"id","evidence":"You have an error in your SQL syntax"}]}]}]}
